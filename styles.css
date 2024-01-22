@@ -186,11 +186,6 @@ h3.testimonial{
   font-size: 3rem;
 } */
 
-h2.footer{
-  font-size: 1.5rem;
-  padding-top: 15px;
-  color: #5c5853;
-}
 
 strong{
   font-weight: 500rem;
@@ -226,18 +221,21 @@ strong{
 
 .about-text-container{
   background-color: var(--primary-color-light);
-  padding: 1rem;
+  padding: 1rem 4rem 1rem 4rem;
 }
-
 .about-text-container img{
+  width: 70%;
+  display:block;
+  margin:auto;
+}
+/* .about-text-container img{
   width: 80%;
   height: auto;
   display: block;
   margin: auto;
-}
+} */
 
 .MRP-container{
-  width: 90%;
   text-align: center;
   margin: auto;
 }
@@ -247,6 +245,7 @@ strong{
   height: auto;
   position: relative;
   padding-top: 1rem;
+  max-width: 100%;
 }
 
 .testimonial-container{
@@ -314,16 +313,53 @@ i.fa-star{
   width: auto;
   background-color: white;
 }
+
+.listing-title{
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .grid {
-  display: grid;
+  /* display: grid;
   grid-gap: 2px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: .5fr .5fr .5sr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: .5fr .5fr .5sr; */
+/*   
+    overflow-x: auto;
+  display: grid;
+  height: 80vh;
+  grid-gap: 2px; /* row gap: 0, column gap: 20px */
+  /* grid-auto-flow: column; 
+  grid-auto-columns: 30%; /* default size for the columns in the grid 
+  overflow-x: auto; */
+    display: grid;
+    grid-auto-columns: 30%;
+    grid-template-rows: 1fr;
+    grid-gap: 2px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+ .box{
+    grid-row: 3;
+    grid-column: auto;
+    background: var(--gray);
+  text-align: center;
+  padding: 10px;
+  border-radius: 3px;
+   }
+
+
+.box {
+  background: var(--gray);
+  text-align: center;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 .box-one {
   background: var(--gray);
- 
   text-align: center;
   border-radius: 3px;
 }
@@ -331,6 +367,8 @@ i.fa-star{
 .box-one img{
   object-fit: cover;
   width: 100%;
+  height: 100%;
+  
 }
 
 
@@ -344,47 +382,42 @@ i.fa-star{
   padding: 5px;
 }
 
+
 a.request{
   color: black;
-}
-.box {
-  background: var(--gray);
-  /* color: #ggg; */
-  text-align: center;
-  padding: 10px;
-  border-radius: 3px;
+  text-decoration: none;
 }
 
-i.fa-solid{
+i.fa-circle-info{
   padding: 2px;
   color: black;
 }
 
-
+/* 
 .grid-2 {
   display: grid;
   grid-gap: 2px;
   grid-template-columns: auto auto auto;
-}
+} */
 
-.grid-2 img{
-  width: 60%;
-  height: auto;
-}
 
-.featured, .listings,.featured-communities {
+.featured, .listings{
   padding: 20px;
 }
 .featured-communities {
-  /* background: #ccc; */
-  /* color: #ggg; */
   text-align: center;
-  border-radius: 3px;
 }
 
-.social-container{
-  height: 90vh;
-  position: relative;
+.featured-communities img{
+  width: 25%;
+  padding: 20px;
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.featured-communities:hover img {
+  opacity: 0.3;
 }
 
 .social-container-text{
@@ -451,19 +484,21 @@ textarea{
 }
 footer{
   background-color: var(--primary-color);
-  height: 20vh;
-}
-.footer-logo{
-  width: 280px;
-  height: auto;
-}
 
-
+  height: 30vh;
+}
 
 .footer-container {
   display: grid;
-  grid-template-columns: .8fr 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
+}
+
+.footer-logo{
+  width: 400px;
+  height: 30vh;
+  border-left: solid white 2px;
+  border-right: solid white 2px;
 }
 
 .socials-footer-block{
@@ -472,6 +507,25 @@ padding: 5px;
 cursor: pointer;
 }
 
+
+h2.footer{
+  font-size: 1rem;
+  padding-bottom: 20px;
+  color: var(--primary-color-dark);
+  letter-spacing: .3rem;
+  cursor: pointer;
+}
+
+footer a{
+    color: var(--primary-color-dark);
+    text-underline-offset: 1rem;
+    text-decoration-color: #fff;
+    cursor: pointer;
+  
+}
+.left-footer{
+  margin-top: 4rem;
+}
 
 .copyright{
   background-color: var(--primary-color-dark);
@@ -484,6 +538,7 @@ cursor: pointer;
 
 .follow-container{
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 /* MEDIA QUERIES */
@@ -494,4 +549,39 @@ cursor: pointer;
   #hamburger-nav {
     display: flex;
   }
+  
+
+
+
+  @media screen and (max-width: 600px) {
+    
+  #hamburger-nav{
+    display: flex;
+
+  }
+    #about { 
+      height: 80vh;
+    }
+    h1, h2{
+      font-size: 1em;
+    }
+    .about-text-container, .testimonial-text, .header-text{
+      font-size: .8em;
+    }
+
+.header-text{
+  position: absolute;
+  left: 50px;
+  bottom: 0rem;
+  display: block;
+  max-width: 40%;
+  background-color: rgba(255,255,255,.5);
+  text-align: center;
+  /* padding: 10px 10px 0px 10px; */
 }
+
+.contact-btn{
+  font-size: 10px;
+}
+
+  }}
