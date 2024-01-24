@@ -404,7 +404,7 @@ i.fa-circle-info{
 .featured, .listings{
   padding: 20px;
 }
-.featured-communities {
+#featured-communities {
   text-align: center;
 }
 
@@ -417,7 +417,7 @@ i.fa-circle-info{
 }
 
 .featured-communities:hover img {
-  opacity: 0.3;
+  opacity: .5;
 }
 
 .social-container-text{
