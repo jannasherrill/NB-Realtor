@@ -162,15 +162,17 @@ position: relative;
   width: 50%;
   background-color: rgba(255,255,255,.5);
   text-align: center;
-  padding: 10px 10px 0px 10px;
+  padding: 0px 10px 10px 10px;
 }
 
+#mobileheader{
+  display:none;
+}
 h1 {
   font-size: 3rem;
 }
 h1, .header-text{
   color: #8A726C;
-  padding-top: 0px;
 }
 
 h2{
@@ -188,11 +190,13 @@ h3.testimonial{
 
 
 strong{
-  font-weight: 500rem;
+  font-weight: 300em;
+  font-size: 1.5em;
 }
 
 .btn-container{
   padding: 10px;
+  margin-top: 10px;
 }
 .contact-btn, button[type=submit]{
   background-color: var(--text-dark);
@@ -228,13 +232,6 @@ strong{
   display:block;
   margin:auto;
 }
-/* .about-text-container img{
-  width: 80%;
-  height: auto;
-  display: block;
-  margin: auto;
-} */
-
 .MRP-container{
   text-align: center;
   margin: auto;
@@ -350,13 +347,6 @@ i.fa-star{
   border-radius: 3px;
    }
 
-
-.box {
-  background: var(--gray);
-  text-align: center;
-  padding: 10px;
-  border-radius: 3px;
-}
 
 .box-one {
   background: var(--gray);
@@ -549,10 +539,82 @@ footer a{
   #hamburger-nav {
     display: flex;
   }
+  #webheader{
+    display:none;
+  }
+  #mobileheader{
+    display:block;
+  }
+
+.header-text{
+  position: absolute;
+  left: 80px;
+  bottom: 9rem;
+  display: block;
+  width: 50%;
+  background-color: rgba(255,255,255,.5);
+  text-align: center;
+  padding: 10px 10px 0px 10px;
+}
+  .testimonial-box-1{
+    margin: 10rem 0 0 7rem;
+  }
+
+  .testimonial-box-2{
+    margin-left: 7rem;
+  }
+
+  .featured-listings{
+    height: 80vh;
+  }
+
+  .contact-container{
+    display: block;
+   justify-content: center;
+   align-items: center;
+   height: 80vh;
+   position: relative;
+ }
+ 
+ .contact-form{
+   padding-top: 2rem;
+   width: 50%;
+   max-width: 50%;
+   margin-left: 10rem;
+ }
+ 
+ .contact-form-2{
+   padding-top: 2rem;
+  max-width: 40%;
   
+ }
+ 
+ label{
+   display:block;
+ }
+ 
+ input, textarea, select{
+   display: block;
+   margin-bottom: 10px;
+   width: 50%;
+   height: 30px;
+ }
+ 
+ button[type=submit]{
+   width: 50%;
+ }
+ 
+  footer{
+    height: 30vh;
+  }
 
+  .footer-logo{
+    width: 80%;
+  }
 
-
+  .footer-container, .follow-container{
+    margin: auto;
+  }
   @media screen and (max-width: 600px) {
     
   #hamburger-nav{
@@ -560,28 +622,101 @@ footer a{
 
   }
     #about { 
-      height: 80vh;
+      height: fit-content;
     }
     h1, h2{
-      font-size: 1em;
+      font-size: 1.5em;
     }
     .about-text-container, .testimonial-text, .header-text{
       font-size: .8em;
     }
+    .btn-container {
+      display:none;
+    }
 
+    .name{
+      font-size: 1em;
+    }
+
+    
 .header-text{
   position: absolute;
-  left: 50px;
-  bottom: 0rem;
-  display: block;
-  max-width: 40%;
-  background-color: rgba(255,255,255,.5);
+  left: 20px;
+  bottom: 4rem;
+  margin-bottom: 1rem;
+  max-width: 50%;
+  max-height: 60%;
   text-align: center;
-  /* padding: 10px 10px 0px 10px; */
+  padding: 0px 10px 10px 10px;
+  font-size: .8em;
+  background-color: rgba(255,255,255,.7);
 }
 
-.contact-btn{
-  font-size: 10px;
+.about-text-container{
+  background-color: var(--primary-color-light);
+  padding: 1rem;
 }
+
+.testimonial-container{
+position: relative;
+}
+
+.testimonial-title{
+width: 80%;
+height: 8%;
+position: absolute;
+top: 100px;
+left: 40px;
+
+}
+.testimonial-box-1{
+width: 80%;
+height: 20%;
+border-radius: 20px;
+background-color: var(--primary-color);
+padding: 1rem;
+margin: auto;
+margin-top: 5rem;
+color: var(--primary-color-dark);
+}
+
+
+.testimonial-box-2{
+  width: 80%;
+  height: 20%;
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  margin: auto;
+  margin-top: 5px;
+  color: var(--primary-color-dark);
+
+}
+
+.testimonial-text{
+  width: 100%;
+  font-size: 1rem;
+  margin: auto;
+}
+
+.featured-listings{
+ height: 60vh; 
+}
+
+.grid {
+
+    display: grid;
+    grid-auto-columns: 45%;
+    grid-template-rows: 1fr;
+    grid-gap: 2px;
+    width: 120%;
+    height: 30%;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  .featured-communities img{
+    width: 60%;
+  }
 
   }}
